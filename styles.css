@@ -1,0 +1,22 @@
+body {
+    margin: 1rem;
+}
+
+.game-header {
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+h1 {
+    color: blueviolet;
+    font-size: 2.5rem;
+    font-family: fantasy;
+}
+
+p {
+    color: darkcyan;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
