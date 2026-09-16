@@ -20,3 +20,23 @@ p {
     font-size: 1.5rem;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.status-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+img {
+    width: 5rem;
+    height: 6rem;
+}
+
+.player-card,
+.turn-panel {
+    background-color: aquamarine;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid darkcyan;
+}
