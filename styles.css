@@ -1,11 +1,12 @@
 body {
     margin: 1rem;
+    text-align: center;
 }
 
 .game-header {
-    text-align: center;
     background-color: aquamarine;
     border-radius: 1rem;
+    border: 2px solid darkcyan;
     padding: 1rem;
 }
 
@@ -39,4 +40,26 @@ img {
     padding: 2rem;
     border-radius: 1rem;
     border: 2px solid darkcyan;
+}
+
+button {
+    background-color: aquamarine;
+    color: blueviolet;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    border: 2px solid blueviolet;
+    padding: 1.5rem;
+}
+
+.dice {
+    display: grid;
+    width: 5rem;
+    height: 5rem;
+    place-items: center;
+    border-radius: 1rem;
+    border: 2px solid blueviolet;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.8rem auto;
 }
