@@ -63,3 +63,20 @@ button {
     font-weight: bold;
     margin: 0.8rem auto;
 }
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 70px);
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background-color:lavender;
+    border-radius: 1rem;
+}
+
+[data-category="maantieto"] {background-color: chocolate;}
+[data-category="yleistieto"] {background-color: cornflowerblue;}
+[data-category="historia"] {background-color: brown;}
+[data-category="taide ja kulttuuri"] {background-color: blueviolet;}
+[data-category="tiede"] {background-color: cadetblue;}
+[data-category="urheilu"] {background-color: blue;}
