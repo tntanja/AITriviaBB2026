@@ -74,6 +74,13 @@ button {
     border-radius: 1rem;
 }
 
+.square {
+    position: relative;
+    display: grid;
+    
+    background-color: antiquewhite;
+}
+
 [data-category="maantieto"] {background-color: chocolate;}
 [data-category="yleistieto"] {background-color: cornflowerblue;}
 [data-category="historia"] {background-color: brown;}
