@@ -10,6 +10,11 @@ const categories = [
 const BOARD_SIZE = 18;
 const boardElement = document.querySelector("#board");
 
+const rollButton = document.querySelector("#roll-button");
+const diceElement = document.querySelector("#dice");
+
+rollButton.addEventListener("click", rollDice);
+
 createaBoard();
 
 function createaBoard() {
@@ -28,6 +33,9 @@ function createaBoard() {
         // ruutu sijoitetaan oikeaan kohtaan
         square.style.gridColumn = coordinate.column;
         square.style.gridRow = coordinate.row;
+
+        square.dataset.category = category.id;
+        square.textContent = category.name;
 
         boardElement.append(square);
     }
@@ -57,4 +65,9 @@ function createBoardCoordinates() {
     }
 
     return coordinates;
+}
+
+
+function rollDice() {
+    console.log("Noppaa heitetty");
 }
