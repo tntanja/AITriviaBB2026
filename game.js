@@ -10,6 +10,13 @@ const categories = [
 const BOARD_SIZE = 18;
 const boardElement = document.querySelector("#board");
 
+const gameState = {
+    player: {
+        name: "Pelaaja",
+        position: 0,
+    }
+};
+
 const rollButton = document.querySelector("#roll-button");
 const diceElement = document.querySelector("#dice");
 
@@ -29,6 +36,8 @@ function createaBoard() {
         const coordinate = coordinates[index];
 
         square.className = "square";
+
+        square.dataset.squareIndex = index;
 
         // ruutu sijoitetaan oikeaan kohtaan
         square.style.gridColumn = coordinate.column;
@@ -70,4 +79,29 @@ function createBoardCoordinates() {
 
 function rollDice() {
     console.log("Noppaa heitetty");
+
+    // random numero 0-1 välillä -> * 6 -> pyöristää alaspäin
+    const result = Math.floor(Math.random() * 6) + 1;
+    diceElement.textContent = result;
+
+    movePlayer(result);
+}
+
+function movePlayer(steps) {
+    const player = gameState.player;
+    player.position = (player.position + steps) % BOARD_SIZE;
+
+    updateToken();
+}
+
+function updateToken() {
+    const currentSpace = document.querySelector(
+        `[data-space-index="${gameState.player.position}"]`
+    );
+
+    const token = document.createElement("span");
+    token.className = "token player-token";
+    token.textContent = "P";
+
+    currentSpace.append(token);
 }
