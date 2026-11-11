@@ -36,8 +36,8 @@ function createaBoard() {
         const coordinate = coordinates[index];
 
         square.className = "square";
-
-        square.dataset.squareIndex = index;
+        // HUOMIO !! Korjaa squareindex -> spaceindex
+        square.dataset.spaceIndex = index;
 
         // ruutu sijoitetaan oikeaan kohtaan
         square.style.gridColumn = coordinate.column;
@@ -92,9 +92,17 @@ function movePlayer(steps) {
     player.position = (player.position + steps) % BOARD_SIZE;
 
     updateToken();
+
+    // selvitetään mihin kohtaan pelaajan nappula pysähtyi
+    const categoryPosition = getCategoryAtPosition(player.position);
+    console.log(categoryPosition);
 }
 
 function updateToken() {
+    document.querySelectorAll(".token").forEach((token) => {
+        token.remove();
+    });
+
     const currentSpace = document.querySelector(
         `[data-space-index="${gameState.player.position}"]`
     );
@@ -104,4 +112,8 @@ function updateToken() {
     token.textContent = "P";
 
     currentSpace.append(token);
+}
+
+function getCategoryAtPosition(position) {
+    return categories[position % categories.length];
 }
