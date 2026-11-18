@@ -15,6 +15,12 @@ const LOCAL_QUESTIONS = {
             answers: ["Turku", "Oulu", "Tampere", "Helsinki"],
             correctAnswer: 3,
             explanation: "Helsinki on Suomen pääkaupunki.",
+        },
+        {
+            question: "Mikä on Ruotsi pääkaupunki?",
+            answers: ["Turku", "Oulu", "Tampere", "Helsinki"],
+            correctAnswer: 3,
+            explanation: "Helsinki on Suomen pääkaupunki.",
         }
     ],
 
@@ -190,6 +196,8 @@ function getCategoryAtPosition(position) {
 // haetaan testikysymys - local question
 function getLocalQuestion(categoryId) {
     const questions = LOCAL_QUESTIONS[categoryId];
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    console.log("Tämä on randomIndex: " + randomIndex);
     console.log(questions);
-    return questions[0];
+    return questions[randomIndex];
 }
