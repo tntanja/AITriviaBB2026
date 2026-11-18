@@ -100,8 +100,8 @@ button {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid darkslateblue;
+    color: darkslateblue;
     font-size: 0.75rem;
 }
 
