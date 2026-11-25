@@ -80,6 +80,15 @@ const gameState = {
     }
 };
 
+const API_URL = "https://oma-trivia-api-0f8ffa1eed2e.herokuapp.com/api/questions";
+const playerQuestionUI = {
+    panel: document.querySelector("#player-q-panel"),
+    category: document.querySelector("#player-q-category"),
+    text: document.querySelector("#player-q-text"),
+    answers: document.querySelector("#player-answers"),
+    feedback: document.querySelector("#player-feedback"),
+}
+
 const rollButton = document.querySelector("#roll-button");
 const diceElement = document.querySelector("#dice");
 

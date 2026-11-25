@@ -108,3 +108,31 @@ button {
 .player-token {
     background-color: bisque;
 }
+
+.q-panel{
+    margin-top: 1rem;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    background-color: aliceblue;
+}
+
+.answers {
+    display: grid;
+    gap: 0.7rem;
+    margin-top: 1rem;
+}
+
+.answer-button.correct{
+    border-color: #039e3c;
+    background-color: aquamarine;
+}
+
+.answer-button.incorrect{
+    border-color: #c62828;
+    background-color: #f9dddd;
+}
+
+.answer-button:disabled{
+    opacity: 1;
+    cursor: default;
+}
